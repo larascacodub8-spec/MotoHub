@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Логотип слева, навигация по центру, кнопка справа */
+  padding: 1.5rem 6rem;
+  background: rgba(5, 5, 9, 0.85);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header-logo img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+.header-text {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Кнопка в шапке больше не будет гигантской */
+.header .btn {
+  padding: 1rem 2.4rem;
+  font-size: 1.4rem;
+  width: auto; /* Запрещаем кнопке растягиваться */
+}

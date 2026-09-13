@@ -1,0 +1,20 @@
+/* Сетка для блока преимуществ (4 карточки в ряд на ПК) */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+/* Сетка для карточек курсов (3 карточки в ряд на ПК) */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Сетка для шагов "Как начать" (4 шага в ряд на ПК) */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}

@@ -1,0 +1,79 @@
+.faq-section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item.active {
+  border-color: rgba(255, 0, 122, 0.4);
+  box-shadow: 0 5px 20px rgba(255, 0, 122, 0.15);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 22px 28px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-main);
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: var(--accent-pink);
+}
+
+.faq-icon {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--accent-pink);
+  transition: transform 0.4s ease;
+  line-height: 1;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg); /* Плюс превращается в крестик */
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0 28px;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease, visibility 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 600px; /* Запас высоты с избытком, чтобы влезал любой текст */
+  opacity: 1;
+  visibility: visible;
+  padding: 0 28px 24px 28px;
+}

@@ -1,0 +1,21 @@
+.nav 
+{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6.5rem;
+
+   
+    font-size: 1.8rem;
+    font-weight: 650;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}

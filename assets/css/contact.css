@@ -1,0 +1,79 @@
+/* Секция контактов */
+.contact {
+  padding: 80px 0;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 40px;
+}
+
+/* Левая колонка с информацией */
+.contact-info .section-title {
+  text-align: left;
+  margin-top: 0;
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.contact-details {
+  margin-top: 30px;
+}
+
+.contact-details p {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+.contact-details a {
+  color: var(--accent-pink);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Форма обратной связи */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Поля ввода и выпадающий список */
+.contact-form input,
+.contact-form select {
+  width: 100%;
+  padding: 16px 20px;
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 1.5rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+/* Подсветка полей при фокусе (клике внутрь) */
+.contact-form input:focus,
+.contact-form select:focus {
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 15px rgba(255, 0, 122, 0.2);
+}
+
+/* Эффект для кнопки формы при нажатии */
+.contact-form .btn:active {
+  transform: scale(0.96);
+}

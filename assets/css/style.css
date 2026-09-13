@@ -1,0 +1,80 @@
+@import "header.css";
+@import "nav.css";
+@import "hero.css";
+@import "btn.css";
+@import "container.css";
+@import "grid.css";
+@import "card.css";
+@import "step.css";
+@import "contact.css";
+@import "animation.css";
+@import "faq.css";
+@import "gift.css";
+
+@import url('[https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap](https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap)');
+ 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-main: #050509;
+  --bg-card: #0f0e17;
+  --bg-card-hover: #161522;
+  --text-main: #ffffff;
+  --text-muted: #a0a0b0;
+  --accent-pink: #ff007a;
+  --accent-purple: #7928ca;
+  --gradient-accent: linear-gradient(135deg, #ff007a 0%, #7928ca 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(255, 0, 122, 0.4), rgba(121, 40, 202, 0.4));
+  --border-color: #222135;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  color: var(--text-main);
+  scroll-behavior: smooth; /* Плавная прокрутка по якорным ссылкам */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  background: 
+    radial-gradient(
+      circle at 75% 40%,
+      rgba(138, 0, 255, 0.35),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 20% 70%,
+      rgba(255, 0, 70, 0.3),
+      transparent 35%
+    ),
+    var(--bg-main);
+  background-attachment: fixed; /* Градиент перестанет резаться пополам */
+  min-height: 100vh;
+}
+
+/* Начальное состояние: элемент прозрачный и сдвинут вниз */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Конечное состояние: элемент полностью видимый и на своем месте */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
