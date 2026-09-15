@@ -1,19 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> 
-  <link rel="icon" href="assets/images/icon.svg" type="image/x-icon">
-  <meta name="description" content="MotoHub — профессиональная мотошкола. Обучение вождению мотоцикла с нуля, подготовка к сдаче на категорию A, курсы городской езды.">
-  <meta property="og:title" content="MotoHub — Мотошкола">
-<meta property="og:description" content="Твой первый шаг к свободе. Обучение вождению мотоциклов.">
-<meta property="og:image" content="assets/images/main-image.jpg">
-<title>MotoHub</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="assets/images/icon.svg" type="image/x-icon">
+    <meta name="description" content="MotoHub — профессиональная мотошкола. Обучение вождению мотоцикла с нуля, подготовка к сдаче на категорию A, курсы городской езды.">
+    <meta property="og:title" content="MotoHub — Мотошкола">
+    <meta property="og:description" content="Твой первый шаг к свободе. Обучение вождению мотоциклов.">
+    <meta property="og:image" content="assets/images/main-image.jpg">
+    <title>MotoHub</title>    
 </head>
 
 <body>
@@ -33,10 +32,10 @@
 
     <a class="btn" href="#contact">Записаться</a>
 </header>
-  <section class="hero">
+
+<section class="hero">
   <div class="container hero-container">
     
-    <!-- Твой текст и кнопка -->
     <div id="main" class="hero-content">
       <div class="hero-badge">
         <span class="badge-dot"></span> Набор на сезон 2027 открыт
@@ -46,14 +45,12 @@
       <a class="btn btn-hero" href="#courses">Выбрать курс</a>
     </div>
 
-    <!-- Твоя картинка справа -->
     <div class="hero-image-wrapper">
       <img src="assets/images/main.png" alt="MotoHub" class="hero-img">
     </div>
 
   </div>
 </section>
- 
 
 <section class="features" id="about">
     <div class="container">
@@ -72,15 +69,15 @@
             </div>
             <div class="feature-card">
                 <h3>Удобная площадка</h3>
-                <p>Собственный открытый трек с качественным покрытием.</p></div>
+                <p>Собственный открытый трек с качественным покрытием.</p>
+            </div>
             <div class="feature-card">
                 <h3>Всегда на связи</h3>
-                <p>Инструктор подскажет и поправит прямо во время движения через гарнитуру </p> </div>
-                 <div class="feature-card">
+                <p>Инструктор подскажет и поправит прямо во время движения через гарнитуру </p> 
+            </div>
+            <div class="feature-card">
                 <h3>Подготовка к экзамену</h3>
                 <p>Экзамен МРЭО проходит на территории обучения</p>
-                 </div>
-
             </div>
         </div>
     </div>
@@ -114,7 +111,8 @@
                     <li>Предоставление экипировки</li>
                     <li>Сопровождение на экзамене</li>
                 </ul>
-                <a href="#contact" class="btn">Записаться</a> </div>
+                <a href="#contact" class="btn">Записаться</a> 
+            </div>
 
             <div class="course-card">
                 <h3 class="course-title">Продвинутый / Трек</h3>
@@ -140,7 +138,6 @@
     <h2 class="section-title text-center">Часто задаваемые вопросы</h2>
 
     <div class="faq-accordion">
-      <!-- Вопрос 1 -->
       <div class="faq-item">
         <button class="faq-question">
           <span>Предоставляется ли экипировка для занятий?</span>
@@ -151,7 +148,6 @@
         </div>
       </div>
 
-      <!-- Вопрос 2 -->
       <div class="faq-item">
         <button class="faq-question">
           <span>Я ни разу не сидел(а) на мотоцикле. У меня получится?</span>
@@ -162,7 +158,6 @@
         </div>
       </div>
 
-      <!-- Вопрос 3 -->
       <div class="faq-item">
         <button class="faq-question">
           <span>На каких мотоциклах проходит обучение?</span>
@@ -173,7 +168,6 @@
         </div>
       </div>
 
-      <!-- Вопрос 4 -->
       <div class="faq-item">
         <button class="faq-question">
           <span>Со скольки лет можно начинать обучение?</span>
@@ -243,88 +237,13 @@
     </div>
 </section>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Находим все карточки и шаги
-    const elementsToAnimate = document.querySelectorAll('.feature-card, .course-card, .step');
-
-    // Наблюдатель за прокруткой
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { 
-      threshold: 0.15 /* Анимация сработает, когда показалось 15% блока */
-    });
-
-    // Вешаем класс и начинаем следить за каждым элементом
-    elementsToAnimate.forEach(el => {
-      el.classList.add('fade-in');
-      observer.observe(el);
-    });
-  });
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.feature-card, .course-card');
-
-  cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      
-      const rotateX = (-y / (rect.height / 2)) * 12;
-      const rotateY = (x / (rect.width / 2)) * 12;
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-      card.style.transition = 'transform 0.5s ease';
-    });
-
-    card.addEventListener('mouseenter', () => {
-      card.style.transition = 'none';
-    });
-  });
-});
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const faqQuestions = document.querySelectorAll('.faq-question');
-
-    faqQuestions.forEach(question => {
-      question.addEventListener('click', () => {
-        const item = question.parentElement;
-        const isActive = item.classList.contains('active');
-
-        // Закрываем все остальные открытые вопросы
-        document.querySelectorAll('.faq-item').forEach(el => {
-          el.classList.remove('active');
-        });
-
-        // Если элемент не был активен — открываем его
-        if (!isActive) {
-          item.classList.add('active');
-        }
-      });
-    });
-  });
-</script>
-
 <button class="gift-trigger-btn" id="openGiftModal">
-   
     <span class="gift-trigger-text">Подарок для второй половинки 💖</span>
-  </button>
-  <div class="gift-modal-overlay" id="giftModal">
+</button>
+
+<div class="gift-modal-overlay" id="giftModal">
     <div class="gift-modal-card">
       <button class="gift-modal-close" id="closeGiftModal">&times;</button>
-      
       
       <div class="gift-image-preview">
         <img src="assets/images/gifts-cats.png" alt="Подарочный сертификат MotoHub" class="gift-img">
@@ -340,35 +259,9 @@ document.addEventListener('DOMContentLoaded', () => {
         Заказать сертификат в Telegram
       </a>
     </div>
-  </div>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const giftModal = document.getElementById('giftModal');
-    const openBtn = document.getElementById('openGiftModal');
-    const closeBtn = document.getElementById('closeGiftModal');
+</div>
 
-    if (openBtn && giftModal) {
-      openBtn.addEventListener('click', () => {
-        giftModal.classList.add('active');
-      });
-    }
-
-    if (closeBtn && giftModal) {
-      closeBtn.addEventListener('click', () => {
-        giftModal.classList.remove('active');
-      });
-    }
-
-    if (giftModal) {
-      giftModal.addEventListener('click', (e) => {
-        if (e.target === giftModal) {
-          giftModal.classList.remove('active');
-        }
-      });
-    }
-  });
-</script>
-</body>
-</html>
+<!-- Важно: этот скрипт должен лежать в той же папке, что и index.html -->
+<script src="assets/js/script.js" defer></script>
 </body>
 </html>
