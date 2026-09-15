@@ -2,6 +2,12 @@
    HERO SECTION - MotoHub
    ========================================== */
 
+/* Защита от горизонтального скролла (черных полос по бокам) на уровне страницы */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 .hero {
     min-height: 750px;
     display: flex;
@@ -18,6 +24,7 @@
     justify-content: space-between;
     gap: 40px;
     width: 100%;
+    position: relative;
 }
 
 /* Розовое неоновое свечение (слева) */
@@ -231,4 +238,72 @@
     100% {
         transform: translateY(-12px);
     }
+}
+
+/* ==========================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ (ТЕЛЕФОНЫ И ПЛАНШЕТЫ)
+   ========================================== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 40px 0;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 3.2rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  /* Сбрасываем абсолютное позиционирование: картинка идет строго ПОД текстом */
+  .hero-image-wrapper {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .hero-img {
+    max-height: 320px;
+    width: 100%;
+  }
+
+  /* Убираем лишние пункты меню в шапке на мобилках, оставляя только MotoHub и кнопку записи */
+  /* (Использует стандартные классы навигации, если названия классов отличаются — скажи) */
+  .nav-links, 
+  .navbar-nav, 
+  .nav-menu li:not(:last-child):not(.logo) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-img {
+    max-height: 240px;
+  }
 }
