@@ -15,13 +15,13 @@
     box-sizing: border-box;
 }
 
-/* ЖЕСТКО УМЕНЬШАЕМ САМУ КАРТИНКУ */
+
 .banner-png-img {
     display: block;
     width: auto !important;
     max-width: 100% !important;
     height: auto !important;
-    max-height: 220px !important; /* Уменьшили высоту, теперь она не будет гигантской */
+    max-height: 250px !important; /* Уменьшили высоту, теперь она не будет гигантской */
     margin: 0 auto;
     object-fit: contain;
     position: relative;
