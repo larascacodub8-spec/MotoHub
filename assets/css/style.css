@@ -10,7 +10,7 @@
 @import "animation.css";
 @import "faq.css";
 @import "gift.css";
-
+@import "feature.css"
 @import url('[https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap](https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap)');
  
 *,
@@ -48,7 +48,6 @@ body {
   font-style: normal;
   font-size: 1.6rem;
   color: var(--text-main);
-  background-color: var(--bg-main);
   background: 
     radial-gradient(
       circle at 75% 40%,
