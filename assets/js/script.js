@@ -109,3 +109,45 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Ошибка в FAQ:", error);
     }
 });
+
+document.getElementById('telegramForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Предотвращаем перезагрузку страницы
+
+    // Получаем данные из полей
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const schoolName = document.getElementById('schoolName').value; // Получаем название автошколы
+    const course = document.getElementById('course').value;
+
+    // Вставьте сюда данные вашего бота
+    const TOKEN = '8620494468:AAH9fWBfJZ0EGxgLPpzVaH661La0xzywBT4';
+    const CHAT_ID = '949076386';
+    
+    // Текст сообщения с учетом нового поля
+    const message = `🚨 Новая заявка в автошколу!\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n🏫 Автошкола: ${schoolName}\n🏍 Курс: ${course}`;
+
+    // Отправка через Telegram API
+    fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text: message,
+            parse_mode: 'Markdown'
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Заявка успешно отправлена! Скоро мы с вами свяжемся.');
+            document.getElementById('telegramForm').reset(); // Очищаем форму
+        } else {
+            alert('Произошла ошибка при отправке. Попробуйте еще раз.');
+        }
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+        alert('Ошибка соединения с сервером.');
+    });
+});

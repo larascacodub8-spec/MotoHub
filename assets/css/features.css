@@ -1,13 +1,14 @@
-/* Делаем блок компактным и по центру */
+/* Делаем блок вертикальной колонкой, чтобы текст был сверху */
 .features-banner-wrapper {
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Включаем вертикальное расположение */
+    align-items: center;    /* Центрируем все элементы по горизонтали */
+    text-align: center;     /* Выравниваем текст по центру */
     width: 100%;
-    max-width: 600px; /* Ограничиваем общую ширину блока */
-    margin: 30px auto 0 auto; /* Центрируем блок на странице */
-    padding: 15px;
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+    padding: 20px;
     background: linear-gradient(135deg, rgba(20, 20, 30, 0.6) 0%, rgba(35, 20, 45, 0.4) 100%);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
@@ -15,23 +16,35 @@
     box-sizing: border-box;
 }
 
+/* Стили для текста сверху */
+.features-banner-wrapper h3 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 15px 0; /* Отступ снизу, чтобы картинка не прилипала к тексту */
+    position: relative;
+    z-index: 3; /* Текст поверх всего */
+}
 
+/* Картинка */
 .banner-png-img {
     display: block;
     width: auto !important;
     max-width: 100% !important;
     height: auto !important;
-    max-height: 250px !important; /* Уменьшили высоту, теперь она не будет гигантской */
-    margin: 0 auto;
+    max-height: 220px !important;
     object-fit: contain;
     position: relative;
     z-index: 2;
     filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
 }
 
-/* Неоновый свет делаем поменьше, чтобы он не расплывался */
+/* Неоновый свет под картинкой */
 .banner-glow {
     position: absolute;
+    bottom: 20px; /* Смещаем свечение ближе к картинке */
+    left: 50%;
+    transform: translateX(-50%);
     width: 180px;
     height: 180px;
     background: radial-gradient(circle, rgba(255, 0, 122, 0.35) 0%, rgba(121, 40, 202, 0.2) 70%, transparent 100%);
@@ -46,9 +59,15 @@
     .features-banner-wrapper {
         max-width: 100%;
         margin-top: 20px;
+        padding: 15px;
+    }
+
+    .features-banner-wrapper h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
     }
 
     .banner-png-img {
-        max-height: 140px !important; /* На телефоне будет еще аккуратнее */
+        max-height: 140px !important;
     }
 }

@@ -28,6 +28,7 @@
         <a class="nav-link" href="#about">О нас</a>
         <a class="nav-link" href="#courses">Курсы</a>
         <a class="nav-link" href="#contact">Контакты</a>
+        <a class="nav-link" href="#faq">Вопросы</a>
     </nav>
 
     <a class="btn" href="#contact">Записаться</a>
@@ -83,14 +84,12 @@
                 <p>Экзамен МРЭО проходит на территории обучения</p>
             </div>
         </div>
-
-        <!-- КРАСИВЫЙ БЛОК С КАРТИНКОЙ ПОД КАРТОЧКАМИ -->
-        <div class="features-banner-wrapper">
-            <div class="banner-glow"></div>
-            <img src="assets/images/honey.png" alt="MotoHub" class="banner-png-img">
-        </div>
-
     </div>
+    <div class="features-banner-wrapper">
+    <h3><strong>Инструктор со стажем 10+ лет</strong></h3>
+    <div class="banner-glow"></div>
+    <img src="assets/images/honey.png" alt="MotoHub" class="banner-png-img">
+</div>
 </section>
 
 <section class="courses" id="courses">
@@ -126,15 +125,29 @@
 
             <div class="course-card">
                 <h3 class="course-title">Продвинутый / Трек</h3>
-                <p class="course-desc">Контрруление, экстренное торможение и спортивная техника.</p>
+                <p class="course-desc">Контрруление, экстренное торможение и спортивная техника. Занятия проводятся на вашем мотоцикле (при желании арендуете мотоцикл у нас)</p>
                 <div class="course-price">1000 лей</div>
                 <ul class="course-list">
+                    <li>3 занятия</li>
                     <li>Спецплощадка и трек</li>
                     <li>Работа с наклонами и свешиваниями</li>
                     <li>Разбор видеозаписи ваших проездов</li>
                 </ul>
                 <a href="#contact" class="btn">Записаться</a>
             </div>
+
+             <div class="course-card">
+    <h3 class="course-title">Индивидуальные занятия</h3>
+    <p class="course-desc">Экзамен на носу, а уверенности нет? Мы исправим это быстро, эффективно и без лишнего стресса.</p>
+    <div class="course-price">700 лей - занятие</div>
+    <ul class="course-list">
+        <li>Работа 1 на 1: фокус внимания инструктора на 100% сосредоточен только на вас и ваших ошибках.</li>
+        <li>Связь с инструктором: используем мотогарнитуру для моментальных подсказок прямо во время движения.</li>
+        <li>Разбор ошибок: детальный анализ каждого маневра.</li>
+        <li>Быстрый результат: интенсивная тренировка на спецплощадке для уверенной сдачи экзамена.</li>
+    </ul>
+    <a href="#contact" class="btn">Записаться</a>
+</div>
 
         </div>
     </div>
@@ -228,21 +241,25 @@
                 <div class="contact-details">
                     <p><strong>Телефон:</strong> +373 68993625</p>
                     <p><strong>Адрес:</strong> г. Бельцы, ул. Ивана Франко 44А</p>
-                    <p><strong>Время работы:</strong> Будние дни с 09:00 до 17:00</p>
+                    <p><strong>Время работы:</strong> Будние дни с 09:00 до 12:00 и 17:00 до 18:30</p>
                 </div>
             </div>
-
-            <form class="contact-form" action="#" method="POST">
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="tel" name="phone" placeholder="Ваш телефон" required>
-                <select name="course">
-                    <option value="" disabled selected>Выберите курс</option>
-                    <option value="base">Базовый (Категория A1 А2)</option>
-                    <option value="city">Полная категория А</option>
-                    <option value="track">Продвинутый / Трек</option>
-                </select>
-                <button type="submit" class="btn">Отправить заявку</button>
-            </form>
+<form class="contact-form" id="telegramForm">
+    <input type="text" name="name" id="name" placeholder="Ваше имя" required>
+    <input type="tel" name="phone" id="phone" placeholder="Ваш телефон" required>
+    
+    <!-- Новое поле: название автошколы -->
+    <input type="text" name="schoolName" id="schoolName" placeholder="Название вашей автошколы" required>
+    
+    <select name="course" id="course">
+        <option value="" disabled selected>Выберите курс</option>
+        <option value="Базовый (Категория A1 A2)">Базовый (Категория A1 A2)</option>
+        <option value="Полная категория A">Полная категория A</option>
+        <option value="Продвинутый / Трек">Продвинутый / Трек</option>
+    </select>
+    
+    <button type="submit" class="btn">Отправить заявку</button>
+</form>
         </div>
     </div>
 </section>
@@ -273,5 +290,12 @@
 
 <!-- Важно: этот скрипт должен лежать в той же папке, что и index.html -->
 <script src="assets/js/script.js" defer></script>
+
+<div class="fullwidth-poster-wrapper">
+    <img src="assets/images/poster.png" 
+         alt="AutoSchool MotoHub — обучение вождению мотоцикла" 
+         class="fullwidth-poster-img"
+         loading="lazy"> <!-- Рекомендуется для оптимизации загрузки -->
+</div>
 </body>
 </html>
