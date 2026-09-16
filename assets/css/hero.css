@@ -288,7 +288,7 @@ html, body {
     max-height: 320px;
     width: 100%;
   }
-  
+
 @media (max-width: 768px) {
   .mobile-hidden {
     display: none !important;
@@ -303,4 +303,5 @@ html, body {
   .hero-img {
     max-height: 240px;
   }
+}
 }
