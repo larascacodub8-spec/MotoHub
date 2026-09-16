@@ -288,12 +288,9 @@ html, body {
     max-height: 320px;
     width: 100%;
   }
-
-  /* Убираем лишние пункты меню в шапке на мобилках, оставляя только MotoHub и кнопку записи */
-  /* (Использует стандартные классы навигации, если названия классов отличаются — скажи) */
-  .nav-links, 
-  .navbar-nav, 
-  .nav-menu li:not(:last-child):not(.logo) {
+  
+@media (max-width: 768px) {
+  .mobile-hidden {
     display: none !important;
   }
 }
