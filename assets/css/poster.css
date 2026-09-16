@@ -1,15 +1,33 @@
 /* Обертка для постера */
 .fullwidth-poster-wrapper {
     width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Дополнительно прячем всё, что может вылезать за границы */
+    margin: 20px 0; /* Небольшие отступы сверху и снизу от другого контента */
+    padding: 0 15px; /* Отступы по бокам на телефонах, чтобы картинка не прилипала к краям */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 
 /* Стилизация самой картинки */
 .fullwidth-poster-img {
-    display: block; 
-    width: 100%;    /* Безопасное растягивание по ширине родителя */
-    height: auto;   /* Сохраняем пропорции */
-    max-width: 100%;
+    display: block;
+    width: 100%;    
+    height: auto;   /* Сохраняет пропорции, ничего не обрезает */
+    max-width: 900px; /* Ограничение ширины на компьютере, чтобы она была аккуратной, а не на весь экран */
+    max-height: 450px; /* Ограничение по высоте, чтобы не была слишком длинной */
+    object-fit: contain; 
+    
+
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .fullwidth-poster-wrapper {
+        padding: 0 10px;
+    }
+    
+    .fullwidth-poster-img {
+        max-height: 250px; /* Компактная высота для телефонов */
+        border-radius: 8px;
+    }
 }
